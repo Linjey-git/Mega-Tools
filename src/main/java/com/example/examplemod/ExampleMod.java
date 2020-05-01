@@ -19,14 +19,21 @@ public class ExampleMod {
     private static Logger logger;
 
     public static Item.ToolMaterial myToolMaterial;
+    public static Item.ToolMaterial superToolMaterial;
     public static Item mySword;
+    public static Item myPickaxe;
+    public static Item mySuperSword;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
 
-        myToolMaterial = EnumHelper.addToolMaterial("MN", 4, 10428, 50.0F, 28.0F, 3);
+        myToolMaterial = EnumHelper.addToolMaterial("TM", 4, 10428, 50.0F, 28.0F, 3);
+        superToolMaterial = EnumHelper.addToolMaterial("STM", 4,-1, 1000.0F, 56.0F, 1);
         mySword = new CustomSword(myToolMaterial);
+        myPickaxe = new CustomPickaxe(myToolMaterial);
+        mySuperSword = new CustomSuperSword(myToolMaterial);
+
 
     }
 

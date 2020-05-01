@@ -14,6 +14,8 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerRenders(ModelRegistryEvent event) {
         registerRender(ExampleMod.mySword);
+        registerRender(ExampleMod.myPickaxe);
+        registerRender(ExampleMod.mySuperSword);
     }
 
     private static void registerRender(Item item) {
@@ -23,5 +25,7 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(ExampleMod.mySword);
+        event.getRegistry().registerAll(ExampleMod.myPickaxe);
+        event.getRegistry().registerAll(ExampleMod.mySuperSword);
     }
 }
