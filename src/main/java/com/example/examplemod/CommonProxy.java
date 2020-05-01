@@ -16,6 +16,7 @@ public class CommonProxy {
         registerRender(ExampleMod.mySword);
         registerRender(ExampleMod.myPickaxe);
         registerRender(ExampleMod.mySuperSword);
+        registerRender(ExampleMod.cactusSword);
     }
 
     private static void registerRender(Item item) {
@@ -27,5 +28,6 @@ public class CommonProxy {
         event.getRegistry().registerAll(ExampleMod.mySword);
         event.getRegistry().registerAll(ExampleMod.myPickaxe);
         event.getRegistry().registerAll(ExampleMod.mySuperSword);
+        event.getRegistry().registerAll(ExampleMod.cactusSword);
     }
 }

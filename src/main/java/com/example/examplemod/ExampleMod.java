@@ -1,6 +1,5 @@
 package com.example.examplemod;
 
-import io.netty.handler.codec.redis.IntegerRedisMessage;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
@@ -20,6 +19,8 @@ public class ExampleMod {
 
     public static Item.ToolMaterial myToolMaterial;
     public static Item.ToolMaterial superToolMaterial;
+    public static Item.ToolMaterial cactusMaterial;
+    public static Item cactusSword;
     public static Item mySword;
     public static Item myPickaxe;
     public static Item mySuperSword;
@@ -30,6 +31,8 @@ public class ExampleMod {
 
         myToolMaterial = EnumHelper.addToolMaterial("TM", 4, 10428, 50.0F, 28.0F, 3);
         superToolMaterial = EnumHelper.addToolMaterial("STM", 4,-1, 1000.0F, 56.0F, 1);
+        cactusMaterial = EnumHelper.addToolMaterial("cactus",4, 400, 10,2.0F,1);
+        cactusSword = new CactusSword(cactusMaterial);
         mySword = new CustomSword(myToolMaterial);
         myPickaxe = new CustomPickaxe(myToolMaterial);
         mySuperSword = new CustomSuperSword(myToolMaterial);
